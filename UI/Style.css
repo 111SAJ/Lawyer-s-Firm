@@ -1,0 +1,493 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* custom success button starts*/
+.button {
+    --color: #00A97F;
+    /* padding: 0.8em 1.7em; */
+    padding: 0.2em 0.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   .button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .button:hover {
+    color: rgb(10, 25, 30);
+   }
+   
+   .button:active {
+    filter: brightness(.8);
+   }
+/* custom success button ends    */
+
+/* custom cancle button starts*/
+.button-cancle {
+    --color: #a92700;
+    /* padding: 0.8em 1.7em; */
+    padding: 0.2em 0.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   .button-cancle::before, .button-cancle::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .button-cancle::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .button-cancle::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .button-cancle:hover::before, .button-cancle:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .button-cancle:hover {
+    color: rgb(10, 25, 30);
+   }
+   
+   .button-cancle:active {
+    filter: brightness(.8);
+   }
+/* custom cancle button ends    */
+
+/* custom text box starts */
+/* Custom text box starts */
+.input-container {
+    position: relative;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.input-container input[type="text"],
+.input-container textarea {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+    resize: none; /* Prevents textarea from being resizable */
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label,
+.input-container textarea:focus ~ .label,
+.input-container textarea:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline,
+.input-container textarea:focus ~ .underline,
+.input-container textarea:valid ~ .underline {
+    transform: scaleX(1);
+}
+/* Custom text box ends */
+
+  
+/* custom text box ends */
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #333; */
+    padding: 10px 0;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+}
+
+
+.logo {
+    margin-bottom: 10px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    height: auto; /* Display links by default on desktop */
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+}
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+
+.navbar>a:hover{
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #333;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+}
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10; /* Ensure it is on top of other elements */
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active hamburger menu animation */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.cover-bg-image{
+    background-image: url(img/img_2.jpg);
+    height: calc(100vh - 135px);
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: 0; /* Hide the navbar by default on mobile */
+        width: 100%;
+    }
+    .hamburger {
+        display: flex; /* Show hamburger menu on mobile */
+    }
+    .navbar.active {
+        height: 272px; /* Adjust height to show the links */
+    }
+}
+
+/*footer Starts*/
+.footer{
+    width: 100%;
+    /* padding: 58px 0; */
+    padding-top: 58px;
+    background-color: black;
+    color: white;
+}
+
+.foot-box-main{
+    margin: 0 58px;
+}
+
+.foot-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot-pages{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+}
+
+.foot-pages h3{
+    margin-bottom: 32px;
+}
+
+.foot-pages a{
+    color: white;
+    text-decoration: none;
+    margin: 6px 0;
+}
+
+.foot-contact-me h3{
+    margin-bottom: 32px;
+}
+
+.foot-contact-me p{
+    margin: 6px 0;
+}
+.foot-contact-me img{
+    width: 22px;
+    height: 22px;
+    margin: 6px 0;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+.foot-contact-me img:hover{
+    transition: 0.5s;
+    border-radius: 50%;
+    margin-right: 12px;
+    opacity: 1;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
+}
+
+.foot-contact-me-row{
+    display: flex;
+}
+
+.foot-contact-me{
+    /* background-color: purple; */
+    width: 100%;
+}
+
+.foot-social{
+    width: 100%;
+    display: flex;
+    flex-direction: column;   
+    /* background-color: red; */
+    text-align: right;
+    
+}
+
+.foot-social h3{
+    margin-bottom: 32px; 
+    
+}
+
+
+.foot-social-icons img{
+    width: 22px;
+    height: 22px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+.foot-social-icons img:hover{
+    transition: 0.5s;
+    border-radius: 50%;
+    opacity: 1;
+    margin-left: 12px;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
+}
+
+.foot-login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #a52a2a; */
+    text-align: right;
+}
+.foot-login-area{
+    display: flex;
+    justify-content: right;
+}
+
+.foot-login h3{
+    margin-bottom: 32px;
+}
+
+.foot-login-area img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
+}
+
+.foot-login-area a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.foot-login-area a:hover{
+    margin-left: 8px;
+    transition: 0.5s;
+}
+
+.foot-developer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 75px 0;
+}
+
+.foot-developer p{
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 971px){
+    .foot-box-main{
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 695px){
+    .foot-content{
+        flex-wrap: wrap;
+    }
+
+    .foot-social{  
+        
+        text-align: left;
+        
+    }
+
+    .foot-login{
+        text-align: left;
+    }
+
+    .foot-login-area{
+        justify-content: left;
+    }
+
+    .foot-pages{
+        margin: 45px 0;
+    }
+
+    .foot-contact-me{
+        margin: 45px 0;
+    }
+
+    .foot-social{
+        margin: 45px 0;
+    }
+
+    .foot-login{
+        margin: 45px 0;
+    }
+
+}
+/*footer Ends*/
+
+
+/* .pattern {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 10;
+    width: 200px;
+    height: 110px;
+    
+    background-color: transparent;
+    background-image: radial-gradient(rgb(255, 21, 21) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px
+  } */
