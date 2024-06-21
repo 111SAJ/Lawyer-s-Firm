@@ -1,11 +1,54 @@
 body {
-    margin: 0;
+    margin-right: 500px;
     font-family: Arial, sans-serif;
 }
 
+
+/* custome cover get in touch button starts */
+.btn {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #40B3A2;
+    min-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    opacity: .95;
+  }
+  
+  .btn .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+  }
+  
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+  }
+/* custome cover get in touch button ends */
+
 /* custom success button starts*/
 .button {
-    --color: #00A97F;
+    --color: #99BC85;
     /* padding: 0.8em 1.7em; */
     padding: 0.2em 0.7em;
     background-color: transparent;
@@ -62,7 +105,7 @@ body {
 
 /* custom cancle button starts*/
 .button-cancle {
-    --color: #a92700;
+    --color: #a927008f;
     /* padding: 0.8em 1.7em; */
     padding: 0.2em 0.7em;
     background-color: transparent;
@@ -118,7 +161,6 @@ body {
 /* custom cancle button ends    */
 
 /* custom text box starts */
-/* Custom text box starts */
 .input-container {
     position: relative;
     margin: 40px auto;
@@ -141,7 +183,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    color: #ccc;
+    color: #b6b6b6;
     transition: all 0.3s ease;
     pointer-events: none;
 }
@@ -191,6 +233,8 @@ body {
 
 .logo {
     margin-bottom: 10px;
+    width: 172px;
+    height: 132px;
 }
 .navbar {
     display: flex;
@@ -200,7 +244,8 @@ body {
     transition: height 0.3s ease-out;
 }
 .navbar a {
-    color: #333;
+    /* color: #333; */
+    color: maroon;
     text-decoration: none;
     padding: 14px 20px;
     text-align: center;
@@ -258,13 +303,100 @@ body {
 }
 
 .cover-bg-image{
-    background-image: url(img/img_2.jpg);
-    height: calc(100vh - 135px);
+    background-image: url(img/cover_Img.JPG);
+    height: calc(100vh - 228px);
     background-repeat: no-repeat;   
     background-attachment: fixed;
     background-position: center top;
     background-size: cover;
 }
+
+/* card container starts */
+.card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-container .glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+  
+  .card-container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+  }
+  
+  .card-container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  .card-container .glass svg {
+    font-size: 2.5em;
+    /* fill: #fff; */
+    fill: #000;
+  }
+  
+.card-mobile-view{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .card-mobile-view{
+        display: block;
+    } 
+
+    .card-desktop-view{
+        display: none;
+    }
+}
+/* card container ends */
+
+/* section 3 starts */
+.bg {
+    /* width: 100%;
+    height: 100%; */
+    background-color: #D1BB9E;
+    background-image: radial-gradient(rgba(12, 12, 12, 0.082) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+  }
+
+
+  
+
+@media only screen and (max-width: 575px){
+    .display-n{
+        display: none;
+    }
+    
+    .margin-bottom{
+        margin-bottom: 20px;
+    }
+} 
+/* section 3 ends */
 
 /* Responsive styles */
 @media only screen and (max-width: 600px) {

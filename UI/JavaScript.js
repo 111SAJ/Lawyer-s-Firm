@@ -16,3 +16,24 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 1200,
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    function checkWidthAndUpdateClass() {
+        var contentContainers = document.querySelectorAll('.content-container');
+        contentContainers.forEach(function(container) {
+            if (window.innerWidth <= 575) {
+                container.classList.add('text-center');
+            } else {
+                container.classList.remove('text-center');
+            }
+        });
+    }
+
+    // Initial check
+    checkWidthAndUpdateClass();
+
+    // Check on window resize
+    window.addEventListener('resize', checkWidthAndUpdateClass);
+});
+
