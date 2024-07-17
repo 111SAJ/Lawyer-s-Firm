@@ -964,7 +964,7 @@ h1 {
       left: 30%;
       width: 50px;
       height: 60px;
-      background-image: radial-gradient(circle, rgba(128, 0, 0, 0.445) 1px, transparent 1px);
+      background-image: radial-gradient(circle, rgba(128, 0, 0, 0.219) 1px, transparent 1px);
       background-size: 10px 10px; /* Adjust the size of the dots */
       animation: moveUpDown 3s infinite ease-in-out;
     }
@@ -1064,4 +1064,11 @@ h1 {
 
 /* ----about page ends---- */
 
+
+
+/* ----contact page starts---- */
+
+
+
+/* ----contact page ends---- */
 
