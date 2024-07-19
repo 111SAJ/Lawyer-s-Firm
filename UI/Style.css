@@ -1,5 +1,64 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
+/* scrollbar styling starts */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #800000;
+}
+/* scrollbar styling ends */
+
+/* scroll up starts */
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+    bottom: 14px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 6px 11px;
+    border-radius: 32%;
+    font-size: 13px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+/* scroll up ends */
+
+/* whats up starts */
+#whatsAppBtn {
+   /* Hidden by default */
+  position: fixed;
+    bottom: -2px;
+    left: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    /* color: white; */
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 32%;
+    font-size: 32px;
+}
+/* whats up ends */
+
 body {
     margin-right: 500px;
     font-family: Arial, sans-serif;
@@ -1135,4 +1194,13 @@ h1 {
 }
 
 /* ----career page ends---- */
+
+
+
+
+
+
+
+
+
 
