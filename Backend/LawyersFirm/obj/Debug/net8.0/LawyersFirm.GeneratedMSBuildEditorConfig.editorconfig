@@ -1,0 +1,91 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LawyersFirm
+build_property.RootNamespace = LawyersFirm
+build_property.ProjectDir = C:\Users\Sayed Asad Jamal\Documents\Visual Studio 2022\Practice_Project\LawyersFirm\LawyersFirm\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Sayed Asad Jamal\Documents\Visual Studio 2022\Practice_Project\LawyersFirm\LawyersFirm
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Career/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Emails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Home/SayedAsadJamal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYXllZEFzYWRKYW1hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Job/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Job/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Job/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Job/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Service/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sayed Asad Jamal/Documents/Visual Studio 2022/Practice_Project/LawyersFirm/LawyersFirm/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-hd5lpehwwy

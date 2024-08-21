@@ -1,0 +1,60 @@
+﻿@model List<Job>
+
+@{
+    ViewData["Title"] = "Jobs Page | Admin";
+}
+
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-up-long"></i>
+</button>
+<button id="whatsAppBtn" title="Whats app">
+    <a href="https://web.whatsapp.com/send?phone=917905614885&text=" target="_blank" style="text-decoration: none; color: #017561"><i class="fa-brands fa-square-whatsapp"></i></a>
+</button>
+
+<!-- jobs section starts  -->
+<section>
+    <div class="container pt-5 pb-5 pattern-cls">
+        <div class="dot-pattern"></div>
+        <div class="text-right">
+            <form asp-controller="Login" asp-action="Logout" method="post">
+                <button type="submit" class="button shadow">Logout <i class="fa-solid fa-right-from-bracket" style="color: #800000;"></i></button>
+            </form>
+        </div>
+        <h3 class="text-center pb-3 pt-5 gradient-text">JOBS</h3>
+        <div class="text-center">
+            <p class="b-crumb" style="color: #000;"><a asp-controller="Admin" asp-action="Index" style="color: #000;"><i class="fa-solid fa-house mr-2" style="color: #000;"></i>Admin</a> / Job</p>
+        </div>
+        <div class="text-left mb-2">
+            @* <button type="button" class="button shadow">CREATE JOB <i class="fa-solid fa-user" style="color: #80000086;"></i></button> *@
+            <button type="button" class="button shadow"><a asp-action="Create" style="text-decoration: none;">CREATE JOB <i class="fa-solid fa-user" style="color: #80000086;"></i></a></button>
+        </div>
+        @if (Model == null || !Model.Any())
+        {
+            <p class="text-center">We're not hiring currently.</p>
+        }
+        else
+        {
+        @foreach (var job in Model)
+        {
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="cookieCard shadow">
+                        <div class="form-group mb-2 mt-2">
+                            <a asp-controller="Job" asp-action="Edit" asp-route-id="@job.JobId"><i class="fa-solid fa-pen-to-square fa-xl mr-2" style="color: #800000;"></i></a>
+                            <a asp-controller="Job" asp-action="Delete" asp-route-id="@job.JobId"><i class="fa-solid fa-trash fa-xl" style="color: #800000;"></i></a>
+                        </div>
+
+                        <p class="cookieHeading">@job.Position | @job.Category <br><span style="font-size: 18px;">Internship - @job.InternshipMonths months</span><br><span style="font-size: 18px;">Post Date: @job.CreatedOn.ToString("yyyy-MM-dd")</span></p>
+                        <p class="cookieDescription">@job.Description</p>
+                        <div class="p-1" style="border: 1px solid #80000063; width: 100%;">
+                            <p>To apply please share your detail on the email:</p>
+                                <p class="font-weight-bold"><i class="fa-solid fa-envelope fa-sm" style="color: #800000;"></i> nomaanadmadsiddiqui@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        }
+    </div>
+</section>
+<!-- jobs section endts  -->

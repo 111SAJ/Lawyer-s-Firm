@@ -1,0 +1,59 @@
+﻿@model List<Job>
+
+@{
+    ViewData["Title"] = "Career Page";
+}
+
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-up-long"></i>
+</button>
+<button id="whatsAppBtn" title="Whats app">
+    <a href="https://web.whatsapp.com/send?phone=917905614885&text=" target="_blank" style="text-decoration: none; color: #017561"><i class="fa-brands fa-square-whatsapp"></i></a>
+</button>
+
+<!-- contact-section 1 starts -->
+<div class="career-cover-bg-image d-flex align-items-center">
+    <div class="container pt-3 pb-3">
+        <p class="text-center mb-5" style="color: #FFF2E1;">
+            <span class="font-weight-bolder" style="font-size: 32px;">CAREER</span><br>
+            <span class="font-weight-light" style="font-size: 22px;">God works wonders</span>
+            <span class="font-weight-light" style="font-size: 22px;"> now and then; Behold a</span>
+            <span class="font-weight-light" style="font-size: 22px;"> lawyer, an honest man.</span>
+        </p>
+        <div class="text-center">
+            <p class="b-crumb"><a asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house mr-2" style="color: #ffffff;"></i>Home</a> / Career</p>
+        </div>
+    </div>
+</div>
+<!-- contact-section 1 ends -->
+
+<!-- career-section 2 starts -->
+<section>
+    <div class="container pt-5 pb-5 pattern-cls">
+        <div class="dot-pattern"></div>
+        <h3 class="text-center pb-3 pt-5 gradient-text">JOBS</h3>
+        @if (Model == null || !Model.Any())
+        {
+            <p class="text-center">We're not hiring currently.</p>
+        }
+        else
+        {
+        @foreach (var job in Model)
+        {
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="cookieCard shadow">
+                        <p class="cookieHeading">@job.Position | @job.Category <br><span style="font-size: 18px;">Internship - @job.InternshipMonths months</span><br><span style="font-size: 18px;">Post Date: @job.CreatedOn.ToString("yyyy-MM-dd")</span></p>
+                        <p class="cookieDescription">@job.Description</p>
+                        <div class="p-1" style="border: 1px solid #80000063; width: 100%;">
+                            <p>To apply please share your detail on the email:</p>
+                                <p class="font-weight-bold"><i class="fa-solid fa-envelope fa-sm" style="color: #800000;"></i> nomaanadmadsiddiqui@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        }
+    </div>
+</section>
+<!-- career-section 2 ends -->

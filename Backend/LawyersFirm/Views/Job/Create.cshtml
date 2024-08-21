@@ -1,0 +1,70 @@
+﻿@model Job
+
+@{
+    ViewData["Title"] = "Job Create | Admin";
+}
+
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-up-long"></i>
+</button>
+<button id="whatsAppBtn" title="Whats app">
+    <a href="https://web.whatsapp.com/send?phone=917905614885&text=" target="_blank" style="text-decoration: none; color: #017561"><i class="fa-brands fa-square-whatsapp"></i></a>
+</button>
+
+<!-- create-jobs section starts  -->
+<section>
+    <div class="container pt-5 pb-5 pattern-cls">
+        <div class="dot-pattern"></div>
+        <div class="text-right">
+            <form asp-controller="Login" asp-action="Logout" method="post">
+                <button type="submit" class="button shadow">Logout <i class="fa-solid fa-right-from-bracket" style="color: #800000;"></i></button>
+            </form>
+        </div>
+        <h3 class="text-center pb-3 pt-5 gradient-text">CREATE JOB</h3>
+        <div class="text-center">
+            <p class="b-crumb" style="color: #000;"><a asp-controller="Admin" asp-action="Index" style="color: #000;"><i class="fa-solid fa-house mr-2" style="color: #000;"></i>Admin</a> / <a asp-controller="Job" asp-action="Index" style="color: #000">Job</a> / Create</p>
+        </div>
+        <div>
+            <form asp-controller="Job" asp-action="Create" method="post">
+                <div class="form-group">
+                    <div class="input-container">
+                        <span class="text-danger" asp-validation-for="Position"></span>
+                        <input type="text" id="Position" name="Position" value="@Model.Position">
+                        <label for="Position" class="label">Position</label>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-container">
+                        <span class="text-danger" asp-validation-for="Category"></span>
+                        <input type="text" id="Category" name="Category" value="@Model.Category">
+                        <label for="Category" class="label">Category</label>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-container">
+                        <span class="text-danger" asp-validation-for="InternshipMonths"></span>
+                        <input type="text" id="InternshipMonths" name="InternshipMonths" value="@Model.InternshipMonths">
+                        <label for="InternshipMonths" class="label">Internship duration in months</label>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-container">
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                        <textarea id="Description" name="Description">@Model.Description</textarea>
+                        <label for="Description" class="label">Description</label>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="reset" class="button-cancle shadow mr-2" data-dismiss="modal">RESET<i class="fa-solid fa-xmark ml-1"></i></button>
+                    <button type="submit" class="button shadow">CREATE<i class="fa-solid fa-check fa-bounce ml-1"></i></button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!-- create-jobs section endts  -->

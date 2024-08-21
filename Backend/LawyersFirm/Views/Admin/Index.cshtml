@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-up-long"></i>
+</button>
+
+<!-- admin-section 1 starts -->
+<div class="container pt-lg-5 pb-lg-5 pattern-cls">
+    <div class="dot-pattern"></div>
+    <div class="text-right">
+        <form asp-controller="Login" asp-action="Logout" method="post">
+                <button type="submit" class="button shadow">Logout <i class="fa-solid fa-right-from-bracket" style="color: #800000;"></i></button>
+        </form>
+    </div>
+
+    <h3 class="text-center pb-3 pt-5 gradient-text mb-5">ADMIN PANEL</h3>
+    
+
+    <div class="row d-flex align-items-center">
+
+        <div class="col text-center mb-3 d-flex justify-content-center">
+            <div class="admin-card">
+                <div class="admin-card-content">
+                    <p class="admin-card-title"><a asp-controller="Emails" asp-action="Index" style="text-decoration: none; color: #fff">Emails</a></p>
+                    <a asp-controller="Emails" asp-action="Index" style="text-decoration: none; color: #fff"><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col text-center d-flex justify-content-center">
+            <div class="admin-card">
+                <div class="admin-card-content">
+                    <p class="admin-card-title"><a asp-controller="Job" asp-action="Index" style="text-decoration: none; color: #fff">JOBS</a></p>
+                    <a asp-controller="Job" asp-action="Index" style="text-decoration: none; color: #fff"><i class="fa-solid fa-users fa-2xl" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- admin-section 1 ends -->
+
+           

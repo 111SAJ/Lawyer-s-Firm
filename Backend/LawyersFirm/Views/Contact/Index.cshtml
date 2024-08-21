@@ -1,0 +1,92 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-up-long"></i>
+</button>
+<button id="whatsAppBtn" title="Whats app">
+    <a href="https://web.whatsapp.com/send?phone=917905614885&text=" target="_blank" style="text-decoration: none; color: #017561"><i class="fa-brands fa-square-whatsapp"></i></a>
+</button>
+
+<!-- contact-section 1 starts -->
+<div class="contact-cover-bg-image d-flex align-items-center">
+    <div class="container pt-3 pb-3">
+        <p class="text-center mb-5" style="color: #FFF2E1;">
+            <span class="font-weight-bolder" style="font-size: 32px;">CONTACT</span>
+            <span class="font-weight-bolder" style="font-size: 32px;">US</span><br>
+            <span class="font-weight-light" style="font-size: 22px;">Never hate </span>
+            <span class="font-weight-light" style="font-size: 22px;">your enemies. It affects</span>
+            <span class="font-weight-light" style="font-size: 22px;"> your judgment </span>
+        </p>
+        <div class="text-center">
+            <p class="b-crumb"><a asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house mr-2" style="color: #ffffff;"></i>Home</a> / Contact</p>
+        </div>
+    </div>
+</div>
+<!-- contact-section 1 ends -->
+<!-- contact-section 2 starts -->
+<div class="container pt-5 pb-5">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-sm-9">
+            <h5 class="font-weight-bold" style="font-size: 1.2em;">
+                Call us anytime, and we will handle your legal needs. <br>
+                We'll do our best to get back to you as soon as possible.
+            </h5>
+            <div class="shadow p-3">
+                <!-- Contact Form Starts -->
+                <h3>Get in touch</h3>
+                <form asp-controller="Contact" asp-action="Index" method="post">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                            <input type="text" id="Name" name="Name" value="@Model.Name"/>
+                            <label for="Name" class="label">Enter your name*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Email"></span>
+                            <input type="text" id="Email" name="Email"  value="@Model.Email"/>
+                            <label for="Email" class="label">Enter your email*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Phone"></span>
+                            <input type="text" id="Phone" name="Phone" value="@Model.Phone" />
+                            <label for="Phone" class="label">Enter your phone*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Message"></span>
+                            <textarea id="Message" name="Message" >@Model.Message</textarea>
+                            <label for="Message" class="label">Enter your message*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <button type="reset" class="button-cancle shadow mr-2" data-dismiss="modal">RESET<i class="fa-solid fa-xmark ml-1"></i></button>
+                    <button type="submit" class="button shadow">SUBMIT<i class="fa-solid fa-check fa-bounce ml-1"></i></button>
+                </div>
+                </form>
+                <!-- Contact Form Ends -->
+            </div>
+        </div>
+        <div class="col-sm-3 d-flex justify-content-center align-items-center">
+            <div>
+                <img src="img/logo.png" class="mb-5 mt-5" alt="logo" width="200px">
+                <p class="font-weight-bold"><i class="fa-solid fa-address-book fa-sm" style="color: #800000;"></i> Lucknow, India</p>
+                <p class="font-weight-bold"><i class="fa-solid fa-phone fa-sm" style="color: #800000;"></i> +91 123 456 7890</p>
+                <p class="font-weight-bold"><i class="fa-solid fa-envelope fa-sm" style="color: #800000;"></i> nomaan@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact-section 2 ends -->

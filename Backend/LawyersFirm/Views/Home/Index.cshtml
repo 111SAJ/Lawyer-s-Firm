@@ -1,0 +1,289 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-up-long"></i>
+</button>
+<button id="whatsAppBtn" title="Whats app">
+    <a href="https://web.whatsapp.com/send?phone=917905614885&text=" target="_blank" style="text-decoration: none; color: #017561"><i class="fa-brands fa-square-whatsapp"></i></a>
+</button>
+
+<!-- Section 1 starts -->
+<div class="cover-bg-image d-flex align-items-center">
+    <div class="container">
+        <p class="text-center mb-5">
+            <span>We're</span>
+            <span>a Lucknow based</span>
+            <span>law firm that's</span>
+            <span>always</span> <br>
+            <span>available to</span>
+            <span>answer your</span>
+            <span>questions,</span>
+            <span>review</span>
+            <span>contracts,</span> <br>
+            <span>and</span>
+            <span>help</span>
+            <span>you</span>
+            <span>with</span>
+            <span>anything</span>
+            <span>on</span>
+            <span>your mind.</span>
+            <span></span>
+            <span></span> <br>
+        </p>
+        <div class="text-center">
+            <button class="btn shadow" style="color: maroon; background-color: transparent;" data-toggle="modal" data-target="#exampleModal">
+                <i class="animation"></i>GET IN TOUCH<i class="animation"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+<!-- Section 1 ends -->
+
+<!-- Modal Starts -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- Contact Form Starts -->
+            <form asp-controller="Home" asp-action="Index" method="post">
+            <div class="modal-body pl-5 pr-5">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                            <input type="text" id="Name" name="Name" value="@Model.Name" />
+                            <label for="Name" class="label">Enter your name*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Email"></span>
+                            <input type="text" id="Email" name="Email" value="@Model.Email" />
+                            <label for="Email" class="label">Enter your email*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Phone"></span>
+                            <input type="text" id="Phone" name="Phone" value="@Model.Phone" />
+                            <label for="Phone" class="label">Enter your phone*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="text-danger" asp-validation-for="Message"></span>
+                            <textarea id="Message" name="Message">@Model.Message</textarea>
+                            <label for="Message" class="label">Enter your message*</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="reset" class="button-cancle shadow" data-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                <button type="submit" class="button shadow"><i class="fa-solid fa-check fa-bounce"></i></button>
+            </div>
+            </form>
+            <!-- Contact Form Ends -->
+        </div>
+    </div>
+</div>
+<!-- Modal Ends -->
+<!-- section 2 starts -->
+<div class="container pt-lg-5 pb-lg-5 pattern-cls">
+    <div class="dot-pattern"></div>
+    <h3 class="text-center pb-3 pt-5 gradient-text">AREA OF EXPERTISE</h3>
+    <h5 class="text-center pb-lg-5" data-aos="fade-up">Legal services for the individual, small business, and corporate client's.</h5>
+    <!-- card desktop view starts -->
+    <div class="card-desktop-view pt-5 pb-5">
+        <div class="card-container pb-5">
+            <div data-text="Matrimonial Matters" style="--r:-15;" class="glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/matrimonial_matters.png" alt="matrimonial_matters"></a>
+            </div>
+            <div data-text="Civil & Criminal Writs" style="--r:5;" class="glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/civil_and_criminal_writs.png" alt="civil_and_criminal_writs"></a>
+            </div>
+            <div data-text="Income Tax" style="--r:25;" class="glass">
+               <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/income_tax.png" alt="income_tax"></a>
+            </div>
+        </div>
+        <div class="card-container pb-5">
+            <div data-text="Company Law" style="--r:-15;" class="glass">
+               <a asp-controller="Service" asp-action="Index"> <img style="width: 50px; height: 50px;" src="~/img/company_law.png" alt="company_law"></a>
+            </div>
+            <div data-text="Arbitration Matters" style="--r:5;" class="glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/arbitration_matters.png" alt="arbitration_matters"></a>
+            </div>
+            <div data-text="Personal Laws" style="--r:25;" class="glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/personal_laws.png" alt="personal_laws"></a>
+            </div>
+        </div>
+        <div class="card-container pb-5">
+            <div data-text="IPR Matters" style="--r:-15;" class="glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/ipr_matters.png" alt="ipr_matters"></a>
+            </div>
+            <div data-text="Constitutional Law" style="--r:5;" class="glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/constitutional_law_matters.png" alt="constitutional_law_matters"></a>
+            </div>
+            <div data-text="DRT/DRAT Matters" style="--r:25;" class="glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/drt_or_drat_matters.png" alt="drt_or_drat_matters"></a>
+            </div>
+        </div>
+    </div>
+    <!-- card desktop view starts -->
+
+    <!-- mobile view starts -->
+    <div class="card-mobile-view pt-5 pb-5">
+        <div class="mobile-card-container pb-3">
+            <div data-text="Matrimonial Matters" style="--r:-15;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/matrimonial_matters.png" alt="matrimonial_matters"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="Civil & Criminal Writs" style="--r:5;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/civil_and_criminal_writs.png" alt="civil_and_criminal_writs"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="Income Tax" style="--r:25;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/income_tax.png" alt="income_tax"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="Company Law" style="--r:-15;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/company_law.png" alt="company_law"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="Arbitration Matters" style="--r:5;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/arbitration_matters.png" alt="arbitration_matters"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="Personal Laws" style="--r:25;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/personal_laws.png" alt="personal_laws"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="IPR Matters" style="--r:-15;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/ipr_matters.png" alt="ipr_matters"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="Constitutional Law" style="--r:5;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/constitutional_law_matters.png" alt="constitutional_law_matters"></a>
+            </div>
+        </div>
+        <div class="mobile-card-container pb-3">
+            <div data-text="DRT/DRAT Matters" style="--r:25;" class="mobile-glass">
+                <a asp-controller="Service" asp-action="Index"><img style="width: 50px; height: 50px;" src="~/img/drt_or_drat_matters.png" alt="drt_or_drat_matters"></a>
+            </div>
+        </div>
+    </div>
+    <!-- mobile view ends -->
+
+</div>
+<!-- section 2 ends -->
+
+<!-- section 3 starts -->
+<div class="bg">
+    <div class="container pt-5 pb-5">
+        <h3 class="text-center pb-3 pt-5 gradient-text">WHY CHOOSE US?</h3>
+        <h5 class="text-center pb-5" data-aos="fade-up">Our mission is to provide clients with superior service and value</h5>
+        <div class="row text-center">
+            <div class="col-sm d-flex align-items-center margin-bottom">
+                <div>
+                    <h5 class="text-right content-container">The Priceless Value of Relationships</h5>
+                    <p class="text-right content-container">In addition to understanding the needs of our clients and developing a foundation of trust and confidence necessary for success, the lawyers at Solomon & T have cultivated decades-long relationships within the community..</p>
+                </div>
+                <div class="display-n">
+                    <img class="ml-2" src="img/like.png" width="42px" height="42px">
+                </div>
+            </div>
+            <div class="col-sm d-flex justify-content-center align-content-center">
+                <!-- <img src="img/logo.png" width="100px" height="250px"> -->
+            </div>
+            <div class="col-sm d-flex align-items-center margin-bottom">
+                <div class="display-n">
+                    <img class="mr-2" src="img/trophy.png" width="42px" height="42px">
+                </div>
+                <div>
+                    <h5 class="text-left content-container">Tremendous Track Record</h5>
+                    <p class="text-left content-container">Our clients love our work and would be more than happy to tell you why. They’ll tell you that we are skilled lawyers and strategic business advisors. They will tell you that we are reliable and accessible. Above all, they will tell you we are committed to providing top quality service and to surpassing our clients’ expectations.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm d-flex align-items-center margin-bottom">
+                <div>
+                    <h5 class="text-right content-container">Client-Focused Solutions and Results</h5>
+                    <p class="text-right content-container">Our firm is focused on our clients’ demands for an exceptional legal service model that provides value. We understand that, for clients, value is not a mere hourly rate comparison. Value means efficient processes for tracking and reporting; creative approaches to reducing legal risk; enhanced cost certainty; and RESULTS.</p>
+                </div>
+                <div class="display-n">
+                    <img class="ml-2" src="img/victory.png" width="42px" height="42px">
+                </div>
+            </div>
+            <div class="col-sm d-flex justify-content-center align-content-center">
+                <img loading="lazy" src="img/Nomaan-Ahmad-Siddiqui.png" class="img-fluid mb-5">
+            </div>
+            <div class="col-sm d-flex align-items-center margin-bottom">
+                <div class="display-n">
+                    <img class="mr-2" src="img/affordable.png" width="42px" height="42px">
+                </div>
+                <div>
+                    <h5 class="text-left content-container">Convenient & Affordable</h5>
+                    <p class="text-left content-container">We analyse each case separately and will work with families on a fee that is the right fit. With offices in Solomon & T, you can make an appointment in the office most convenient for you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm d-flex align-items-center margin-bottom">
+                <div>
+                    <h5 class="text-right content-container">Diversity and Inclusion</h5>
+                    <p class="text-right content-container">We have designed our firm to be a reflection of our society, including promoting individuals to leadership positions regardless of race, gender, religion or orientation. Maintaining and expanding the diversity of our team is a central tenet of our firm. We actively recruit diverse team members.</p>
+                </div>
+                <div class="display-n">
+                    <img class="ml-2" src="img/diversity.png" width="42px" height="42px">
+                </div>
+            </div>
+            <div class="col-sm d-flex justify-content-center align-content-center">
+                <!-- <img src="img/logo.png" width="100px" height="250px"> -->
+            </div>
+            <div class="col-sm">
+                <div class="col-sm d-flex align-items-center">
+                    <div class="display-n">
+                        <img class="mr-2" src="img/Knowledge.png" width="42px" height="42px">
+                    </div>
+                    <div>
+                        <h5 class="text-left content-container">Accumulated Knowledge</h5>
+                        <p class="text-left content-container">When you hire our firm, you get more than just the attorney directly handling your case. Our attorneys offer each other the benefit of their particular expertise in their various practice areas. You may work primarily with one attorney, but all of our lawyers work for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- section 3 ends -->
+
+<!-- section 4 starts -->
+<div class="parallax-container">
+    <div class="blur-background"></div>
+    <div class="parallax-content">
+        <h3>When success depends on your reputation and legal counsel, you need a lawyer you can trust !!</h3>
+        <button class="btn shadow" style="color: #FFF2E1; border: 1px solid #FFF2E1; background-color: transparent;" data-toggle="modal" data-target="#exampleModal">
+            <i class="animation"></i>CONTACT US<i class="animation"></i>
+        </button>
+    </div>
+</div>
+<!-- section 4 ends -->

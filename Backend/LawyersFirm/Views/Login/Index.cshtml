@@ -1,0 +1,174 @@
+﻿@model Login
+
+@{
+    ViewData["Title"] = "Login | Admin";
+}
+
+<head>
+    <style>
+        .container {
+  display: flex;
+  width: 520px;
+  height: 500px;
+  max-width: 99%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff25;
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.03);
+  border: 0.1px solid rgba(128, 128, 128, 0.178);
+}
+
+.left {
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  backdrop-filter: blur(20px);
+  position: relative;
+}
+
+.form::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 90%;
+  right: 1%;
+  z-index: -1;
+  background: radial-gradient(
+    circle,
+    rgb(194, 13, 170) 20%,
+    rgb(26, 186, 235) 60%,
+
+    rgb(26, 186, 235) 100%
+  );
+  filter: blur(70px);
+  border-radius: 50%;
+}
+
+.right {
+  width: 34%;
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.container::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 80%;
+  right: -40%;
+  background: rgb(157, 173, 203);
+  background: radial-gradient(
+    circle,
+    rgba(128, 0, 0, 0.582) 61%,
+    rgb(146, 159, 99) 100%
+  );
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.input,
+button {
+  background: rgba(253, 253, 253, 0);
+  outline: none;
+  border: 1px solid rgba(255, 0, 0, 0);
+  border-radius: 0.5rem;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  display: block;
+  color: #425981;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.input-block {
+  position: relative;
+}
+
+label, span {
+  position: absolute;
+  left: 15%;
+  top: 98%;
+  pointer-events: none;
+  color: gray;
+}
+
+.forgot {
+  display: block;
+  margin: 5px 0 10px 0;
+  margin-left: 35px;
+  color: #5e7eb6;
+  font-size: 0.9em;
+}
+
+.input:focus + label,
+.input:valid + label {
+  transform: translateY(-120%) scale(0.9);
+  transition: all 0.4s;
+}
+
+button {
+  background-color: #5e7eb6;
+  color: white;
+  font-size: medium;
+  box-shadow: 2px 4px 8px rgba(70, 70, 70, 0.178);
+}
+
+a {
+  color: #5e7eb6;
+}
+
+.input {
+  box-shadow: inset 4px 4px 4px rgba(165, 163, 163, 0.315),
+    4px 4px 4px rgba(218, 218, 218, 0.13);
+}
+
+</style>
+</head>
+
+<h3 class="text-center pb-3 pt-5 gradient-text">ADMIN LOGIN</h3>
+
+<!-- login form section starts -->
+    <section class="pt-5 pb-5">
+      <div class="container">
+          <div class="left">
+            <form class="form" asp-controller="Login" asp-action="Index" method="post">
+                  <div class="input-block mb-5">
+                        <input class="input" type="text" id="Username" name="Username" >
+                        <label for="Username">Username</label>
+                        <span class="text-danger" asp-validation-for="Username"></span>
+                  </div>
+                  <div class="input-block mb-5">
+                        <input class="input" type="password" id="Password" name="Password">
+                        <label for="Password">Password</label>
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                  </div>
+                <div class="input-block ">
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <span class="text-danger">@ViewBag.ErrorMessage</span>
+                    }
+                </div>
+                  <div class="input-block mt-3">
+                        <button class="button-cancle shadow" type="submit">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+    </section>
+    <!-- login form section ends -->
